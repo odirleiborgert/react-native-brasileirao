@@ -2,8 +2,13 @@ import React from 'react';
 
 import { View, Text, Button } from 'react-native';
 
-export default function Guesses() {
+export default class Guesses extends React.Component {
+
+  constructor(props) {
+    super(props);
+  }
   
+  render() {
     return (
       <View>
         <Text>Guesses</Text>
@@ -14,5 +19,5 @@ export default function Guesses() {
         <Button title="Results" onPress={() => this.props.navigation.navigate('Results')}></Button>
       </View>
     );
-
+  }
 }
