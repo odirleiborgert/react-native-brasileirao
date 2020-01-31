@@ -2,7 +2,7 @@ import styled from 'styled-components/native'
 
 export const BoxScrollView = styled.ScrollView.attrs({
     horizontal: true,
-    contentContainerStyle: { paddingLeft: 20, paddingRight: 20 },
+    contentContainerStyle: { paddingLeft: 20, paddingRight: 10 },
     showsHorizontalScrollIndicator: false,
 })``
 
