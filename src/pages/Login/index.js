@@ -2,8 +2,8 @@ import React from 'react';
 
 import { Container, Image, TextInput, Button, View } from './styles'
 
-const bg = require('~/assets/img/bg.jpg')
-const logo = require('~/assets/img/logo.png')
+import bg from '~/assets/img/bg.jpg'
+import logo from '~/assets/img/logo.png'
 
 export default class Login extends React.Component {
 

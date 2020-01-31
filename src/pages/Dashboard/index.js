@@ -1,53 +1,47 @@
 import React from 'react';
 
-import { View, Text, Button, StatusBar, ScrollView } from 'react-native';
+import { Container, View, Text } from './styles'
 
-import styled from '../../styled.js'
+import BoxContainer from '~/components/BoxContainer'
 
 export default class Dashboard extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      guesses: {
+        news: [
+          { number: 6, title: 'xyz' },
+          { number: 7, title: 'xyz' },
+          { number: 8, title: 'xyz' },
+          { number: 9, title: 'xyz' },
+          { number: 10, title: 'xyz' },
+          { number: 11, title: 'xyz' },
+        ],
+        olds: [
+          { number: 5, title: 'xyz' },
+          { number: 4, title: 'xyz' },
+          { number: 3, title: 'xyz' },
+          { number: 2, title: 'xyz' },
+          { number: 1, title: 'xyz' },
+        ]
+      }
+    }
   }
 
   render() {
     return (
-      <View style={styled.layout.container}>
-        
-        <StatusBar hidden={true} />
+      <Container>
 
-        <View style={styled.dashboard.scroll}>
-          <Text style={styled.dashboard.title}>Próximas rodadas</Text>
-          <ScrollView>
-            <View style={styled.dashboard.box}>
-              <Text style={styled.dashboard.box_number}>6°</Text>
-              <Text style={styled.dashboard.box_text}>Rodada</Text>
-            </View>
-            <View style={styled.dashboard.box}>
-              <Text style={styled.dashboard.box_number}>7°</Text>
-              <Text style={styled.dashboard.box_text}>Rodada</Text>
-            </View>
-            <View style={styled.dashboard.box}>
-              <Text style={styled.dashboard.box_number}>8°</Text>
-              <Text style={styled.dashboard.box_text}>Rodada</Text>
-            </View>
-          </ScrollView>
-        </View>
+        <BoxContainer title="Próximas rodadas" data={this.state.guesses.news} />
         
         <View>
-          <Text style={styled.dashboard.title}>Ranking geral</Text>
-        </View>
-        
-        <View>
-          <Text style={styled.dashboard.title}>Rodadas realizadas</Text>
+          <Text>Ranking geral</Text>
         </View>
 
-        {/* <Button title="Dashboard" onPress={() => this.props.navigation.navigate('Dashboard')}></Button>
-        <Button title="Guesses" onPress={() => this.props.navigation.navigate('Guesses')}></Button> */}
-        <Button title="Login" onPress={() => this.props.navigation.navigate('Login')}></Button>
-        {/* <Button title="Ranking" onPress={() => this.props.navigation.navigate('Ranking')}></Button>
-        <Button title="Results" onPress={() => this.props.navigation.navigate('Results')}></Button> */}
-      </View>
+        <BoxContainer title="Rodadas realizadas" data={this.state.guesses.olds} />
+
+      </Container>
     );
   }
 }
