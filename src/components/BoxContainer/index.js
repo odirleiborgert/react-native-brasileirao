@@ -16,7 +16,7 @@ export default class Dashboard extends React.Component {
         <BoxTitle>{this.props.title}</BoxTitle>
         <BoxScrollView>
           {this.props.data.map((item, key) => 
-            <BoxContainerItem num={item.number} key={key} />
+            <BoxContainerItem number={item.number} key={key} navigation={this.props.navigation} />
           )}
         </BoxScrollView>
       </BoxView>

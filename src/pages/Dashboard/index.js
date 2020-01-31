@@ -37,14 +37,14 @@ export default class Dashboard extends React.Component {
 
         <Header />
 
-        <BoxContainer title="Próximas rodadas" data={this.state.guesses.news} />
+        <BoxContainer title="Próximas rodadas" data={this.state.guesses.news} navigation={this.props.navigation} />
         
         <View>
           <GuessTitle guess={8} />
           <Text>Ranking geral</Text>
         </View>
 
-        <BoxContainer title="Rodadas realizadas" data={this.state.guesses.olds} />
+        <BoxContainer title="Rodadas realizadas" data={this.state.guesses.olds} navigation={this.props.navigation} />
 
       </Container>
     );

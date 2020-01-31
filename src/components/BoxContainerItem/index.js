@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { TouchableOpacity } from 'react-native'
+
 import { BoxItem, BoxTitle, BoxSubtitle } from './styles'
 
 export default class BoxContainerItem extends React.Component {
@@ -11,10 +13,12 @@ export default class BoxContainerItem extends React.Component {
   render() {
     return (
       <>
-        <BoxItem>
-          <BoxTitle>{this.props.num}º</BoxTitle>
-          <BoxSubtitle>Rodada</BoxSubtitle>
-        </BoxItem>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('Login')}>
+          <BoxItem>
+            <BoxTitle>{this.props.number}º</BoxTitle>
+            <BoxSubtitle>Rodada</BoxSubtitle>
+          </BoxItem>
+        </TouchableOpacity>
       </>
     );
   }
