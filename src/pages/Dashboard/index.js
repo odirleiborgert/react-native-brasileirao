@@ -4,7 +4,6 @@ import { Container, View, Text } from './styles'
 
 import Header from '~/components/Header'
 import BoxContainer from '~/components/BoxContainer'
-import GuessTitle from '~/components/GuessTitle'
 
 export default class Dashboard extends React.Component {
 
@@ -40,7 +39,6 @@ export default class Dashboard extends React.Component {
         <BoxContainer title="Próximas rodadas" data={this.state.guesses.news} navigation={this.props.navigation} />
         
         <View>
-          <GuessTitle guess={8} />
           <Text>Ranking geral</Text>
         </View>
 

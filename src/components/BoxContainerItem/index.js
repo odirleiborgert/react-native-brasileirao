@@ -13,7 +13,9 @@ export default class BoxContainerItem extends React.Component {
   render() {
     return (
       <>
-        <TouchableOpacity onPress={() => this.props.navigation.navigate('Login')}>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('Results', {
+          id: this.props.number
+        })}>
           <BoxItem>
             <BoxTitle>{this.props.number}º</BoxTitle>
             <BoxSubtitle>Rodada</BoxSubtitle>
