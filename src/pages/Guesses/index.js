@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Button } from 'react-native';
-import { Container, View, ScrollView, Text } from './styles'
+import { Container, GuessContainer, GuessTime, GuessTimeLeftName, GuessNumber, GuessX, GuessXText, View, ScrollView, Text } from './styles'
 
 import Header from '~/components/Header'
 import GuessTitle from '~/components/GuessTitle'
@@ -11,6 +11,20 @@ export default class Guesses extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      guesses: [
+        { name_1: 'Corinthians', score_1: 4, name_2: 'Palmeiras', score_2: 0 },
+        { name_1: 'São Paulo', score_1: 2, name_2: 'Santos', score_2: 2 },
+        { name_1: 'Paisandu', score_1: 4, name_2: 'Palmeiras', score_2: 0 },
+        { name_1: 'Vitória', score_1: 2, name_2: 'Bahia', score_2: 2 },
+        { name_1: 'Cruzeiro', score_1: 4, name_2: 'Palmeiras', score_2: 0 },
+        { name_1: 'São Paulo', score_1: 2, name_2: 'Santos', score_2: 2 },
+        { name_1: 'Paisandu', score_1: 4, name_2: 'Palmeiras', score_2: 0 },
+        { name_1: 'Vitória', score_1: 2, name_2: 'Bahia', score_2: 2 },
+        { name_1: 'Cruzeiro', score_1: 4, name_2: 'Palmeiras', score_2: 0 },
+        { name_1: 'Athlético PR', score_1: 2, name_2: 'Santos', score_2: 2 },
+      ]
+    }
   }
   
   render() {
@@ -20,43 +34,21 @@ export default class Guesses extends React.Component {
         <NavGuess />
         <GuessTitle guess={this.props.navigation.getParam('id', 0) } />
         <ScrollView>
-          <Text>Aquiv ai todos os meus palpites pra essa rodada</Text>
-          <Text>Aquiv ai todos os meus palpites pra essa rodada</Text>
-          <Text>Aquiv ai todos os meus palpites pra essa rodada</Text>
-          <Text>Aquiv ai todos oasdfasds meus palpites pra essa rodada</Text>
-          <Text>Aquiv ai todos os meus palpites pra essa rodada</Text>
-          <Text>Aquiv ai todos os meus paasdflpites pra essa rodada</Text>
-          <Text>Aquiv ai todos os meus palpites pra essa rodada</Text>
-          <Text>Aquiv ai todoasdfs os madseus palpites pra essa rodada</Text>
-          <Text>Aquiv ai todos os meus palpites pra essa rodada</Text>
-          <Text>Aquiv ai todos os asdfmeus palpites pra essa rodada</Text>
-          <Text>Aquiv ai todos os meus palpites pra essa rodada</Text>
-          <Text>Aquiv ai todosadsf os meus palpites pra essa rodada</Text>
-          <Text>Aquiv ai todos os meus adsfpalpites pra essa rodada</Text>
-          <Text>Aquiv ai todos os meus palpites pra essa rodada</Text>
-          <Text>Aquiv ai todos os meus palpites pra essa rodada</Text>
-          <Text>Aquiv ai todos os meus palpites pra essa rodada</Text>
-          <Text>Aquiv ai todos oasdfasds meus palpites pra essa rodada</Text>
-          <Text>Aquiv ai todos os meus palpites pra essa rodada</Text>
-          <Text>Aquiv ai todos os meus paasdflpites pra essa rodada</Text>
-          <Text>Aquiv ai todos os meus palpites pra essa rodada</Text>
-          <Text>Aquiv ai todoasdfs os madseus palpites pra essa rodada</Text>
-          <Text>Aquiv ai todos os meus palpites pra essa rodada</Text>
-          <Text>Aquiv ai todos os asdfmeus palpites pra essa rodada</Text>
-          <Text>Aquiv ai todos os meus palpites pra essa rodada</Text>
-          <Text>Aquiv ai todosadsf os meus palpites pra essa rodada</Text>
-          <Text>Aquiv ai todos os meus adsfpalpites pra essa rodada</Text>
-          <Text>Aquiv ai todos os meus palpites pra essa rodada</Text>
-          <Text>Aquiv ai todos os meus adf pra essa rodada</Text>
-          <Text>Aquiv ai todos adsfos meus palpites pra essa rodada</Text>
-          <Text>Aquiv ai todos os meus palpites pra essa rodada</Text>
-          <Text>Aquiv ai todos os meus pfaalpites pra essa rodada</Text>
-          <Text>Aquiv ai todos os meus palpites pra essa rodada</Text>
-          <Text>Aquiv ai todos osasdf masdeus palpites pra essa rodada</Text>
-          <Text>Aquiv ai todos os meus palpites pra essa rodada</Text>
-          <Text>Aquiv ai todos os meus palpites pra essa rodada</Text>
-          <Text>Aquiv ai todos os meus palpites pra essa rodada</Text>
-          <Text>Aquiv ai todos os meus palpites pra essa rodada</Text>
+          {this.state.guesses.map((item, key) => 
+            <GuessContainer key={key}>
+              <GuessTime>
+                <GuessTimeLeftName>{item.name_1}</GuessTimeLeftName>
+              </GuessTime>
+              <GuessNumber></GuessNumber>
+              <GuessX>
+                <GuessXText>x</GuessXText>
+              </GuessX>
+              <GuessNumber></GuessNumber>
+              <GuessTime>
+                <GuessTimeLeftName>{item.name_2}</GuessTimeLeftName>
+              </GuessTime>
+            </GuessContainer>
+          )}
         </ScrollView>
         <Button title="Salvar" onPress={() => this.props.navigation.navigate('Dashboard')}></Button>        
       </Container>
