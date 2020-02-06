@@ -33,6 +33,6 @@ const Routes = createAppContainer(createSwitchNavigator({
         path: 'results/:id'
     }
 },
-{initialRouteName : 'Guesses'}));
+{initialRouteName : 'Ranking'}));
 
 export default Routes;

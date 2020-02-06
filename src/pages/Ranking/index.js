@@ -1,6 +1,8 @@
 import React from 'react';
 
-import { View, Text, Button } from 'react-native';
+import { View, Button } from 'react-native';
+
+import { Container, ScrollView, UserContainer, UserBoxName, UserName, UserBoxPointer, UserPointer } from './styles'
 
 import Header from '~/components/Header'
 import GuessTitle from '~/components/GuessTitle'
@@ -14,13 +16,66 @@ export default class Ranking extends React.Component {
 
   render() {
     return (
-      <View>
+      <Container>
+
         <Header />
+
         <NavGuess />
+
         <GuessTitle guess={this.props.navigation.getParam('id', 0) } />
-        <Text>Ranking</Text>
+
+        <ScrollView>
+
+          <UserContainer>
+            <UserBoxName>
+              <UserName>Odirlei</UserName>
+            </UserBoxName>
+            <UserBoxPointer>
+              <UserPointer>4545 pts</UserPointer>
+            </UserBoxPointer>
+          </UserContainer>
+
+          <UserContainer>
+            <UserBoxName>
+              <UserName>Odirlei</UserName>
+            </UserBoxName>
+            <UserBoxPointer>
+              <UserPointer>1520 pts</UserPointer>
+            </UserBoxPointer>
+          </UserContainer>
+
+          <UserContainer>
+            <UserBoxName>
+              <UserName>Odirlei</UserName>
+            </UserBoxName>
+            <UserBoxPointer>
+              <UserPointer>980 pts</UserPointer>
+            </UserBoxPointer>
+          </UserContainer>
+
+          <UserContainer>
+            <UserBoxName>
+              <UserName>Odirlei</UserName>
+            </UserBoxName>
+            <UserBoxPointer>
+              <UserPointer>800 pts</UserPointer>
+            </UserBoxPointer>
+          </UserContainer>
+
+          <UserContainer>
+            <UserBoxName>
+              <UserName>Odirlei</UserName>
+            </UserBoxName>
+            <UserBoxPointer>
+              <UserPointer>153 pts</UserPointer>
+            </UserBoxPointer>
+          </UserContainer>
+
+        </ScrollView>
+
         <Button title="Ranking Geral" onPress={() => this.props.navigation.navigate('Dashboard')}></Button>
-      </View>
+
+      </Container>
     );
   }
 }
