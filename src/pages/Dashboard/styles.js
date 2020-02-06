@@ -7,10 +7,20 @@ export const Container = styled.ImageBackground`
 
 export const View = styled.View`
     width: 90%;
-    margin: auto; 
+    margin: auto;
+    flex: 1;
 `
 
 export const Text = styled.Text`
-    font-size: 18px; 
+    font-size: 16px;
 `
 
+export const Title = styled.Text`
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+`
+
+export const ScrollView = styled.ScrollView`
+    
+`

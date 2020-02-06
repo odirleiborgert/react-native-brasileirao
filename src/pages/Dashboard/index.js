@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, View, Text } from './styles'
+import { Container, View, ScrollView, Title, Text } from './styles'
 
 import Header from '~/components/Header'
 import BoxContainer from '~/components/BoxContainer'
@@ -39,7 +39,34 @@ export default class Dashboard extends React.Component {
         <BoxContainer title="Próximas rodadas" data={this.state.guesses.news} navigation={this.props.navigation} />
         
         <View>
-          <Text>Ranking geral</Text>
+          <Title>Ranking geral</Title>
+          <ScrollView>
+            <Text>Ranking geral</Text>
+            <Text>Ranking geral</Text>
+            <Text>Ranking geral</Text>
+            <Text>Ranking geral</Text>
+            <Text>Ranking geral</Text>
+            <Text>Rankadfing geral</Text>
+            <Text>Ranking asdfgeral</Text>
+            <Text>Ranking geral</Text>
+            <Text>Ranking gasdferal</Text>
+            <Text>Rankinasg geral</Text>
+            <Text>Ranking geral</Text>
+            <Text>Ranking geral</Text>
+            <Text>Rankadfing geral</Text>
+            <Text>Ranking asdfgeral</Text>
+            <Text>Ranking geral</Text>
+            <Text>Ranking gasdferal</Text>
+            <Text>Rankinasg geral</Text>
+            <Text>Ranking gasderal</Text>
+            <Text>Ranking geral</Text>
+            <Text>Ranking geral</Text>
+            <Text>Ranking a</Text>
+            <Text>Ranking geral</Text>
+            <Text>Rankingasdf geral</Text>
+            <Text>Ranking geral</Text>
+            <Text>Ranking geasfasdral</Text>
+          </ScrollView>
         </View>
 
         <BoxContainer title="Rodadas realizadas" data={this.state.guesses.olds} navigation={this.props.navigation} />

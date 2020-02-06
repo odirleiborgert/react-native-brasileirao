@@ -11,7 +11,10 @@ export default class NavGuess extends React.Component {
   render() {
     return (
       <View>
-        <Text>Nav Guess</Text>
+        <Text>Meus Palpites</Text>
+        <Text>Outros Palpites</Text>
+        <Text>Resultados</Text>
+        <Text>Ranking</Text>
       </View>
     );
   }

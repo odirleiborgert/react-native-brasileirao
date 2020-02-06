@@ -12,7 +12,8 @@ export const BoxTitle = styled.Text`
     margin: 3px 0;
 `
 export const BoxView = styled.View`
-    height: 150px;
+    height: 160px;
+    padding: 10px 0;
     background: #ddd;
     justify-content: center;
     align-items: flex-start;

@@ -13,7 +13,7 @@ export default class BoxContainerItem extends React.Component {
   render() {
     return (
       <>
-        <TouchableOpacity onPress={() => this.props.navigation.navigate('Results', {
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('Guesses', {
           id: this.props.number
         })}>
           <BoxItem>

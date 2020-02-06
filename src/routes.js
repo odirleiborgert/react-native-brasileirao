@@ -2,6 +2,7 @@ import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 
 import Dashboard from '~/pages/Dashboard';
 import Guesses from '~/pages/Guesses';
+import Others from '~/pages/Others';
 import Login from '~/pages/Login';
 import Ranking from '~/pages/Ranking';
 import Results from '~/pages/Results';
@@ -13,7 +14,11 @@ const Routes = createAppContainer(createSwitchNavigator({
     },
     Guesses: {
         screen: Guesses,
-        path: 'guesses'
+        path: 'guesses/:id'
+    },
+    Others: {
+        screen: Others,
+        path: 'others/:id'
     },
     Login: {
         screen: Login,
@@ -21,13 +26,13 @@ const Routes = createAppContainer(createSwitchNavigator({
     },
     Ranking: {
         screen: Ranking,
-        path: 'ranking'
+        path: 'ranking/:id'
     },
     Results: {
         screen: Results,
-        path: 'results'
+        path: 'results/:id'
     }
 },
-{initialRouteName : 'Dashboard'}));
+{initialRouteName : 'Guesses'}));
 
 export default Routes;
