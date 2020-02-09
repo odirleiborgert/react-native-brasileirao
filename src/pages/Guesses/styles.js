@@ -16,7 +16,7 @@ export const Text = styled.Text`
 `
 
 export const ScrollView = styled.ScrollView`
-    
+    margin-bottom: 20px;
 `
 
 /// Palpites Blocks
@@ -27,7 +27,6 @@ export const GuessContainer = styled.View`
     margin-top: 5px;
     margin-bottom: 5px;
     height: 50px;
-    border: 1px #aaa solid;
     flex-direction: row;
 `
 export const GuessTime = styled.View`
@@ -42,6 +41,7 @@ export const GuessTimeLeftName = styled.Text`
 export const GuessNumber = styled.View`
     width: 13%;
     height: 50px;
+    border: 1px #aaa solid;
 `
 export const GuessX = styled.View`
     width: 8%;

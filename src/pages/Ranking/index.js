@@ -20,9 +20,9 @@ export default class Ranking extends React.Component {
 
         <Header />
 
-        <NavGuess />
-
         <GuessTitle guess={this.props.navigation.getParam('id', 0) } />
+
+        <NavGuess guess={this.props.navigation.getParam('id', 0) } navigation={this.props.navigation} />
 
         <ScrollView>
 
@@ -73,7 +73,7 @@ export default class Ranking extends React.Component {
 
         </ScrollView>
 
-        <Button title="Ranking Geral" onPress={() => this.props.navigation.navigate('Dashboard')}></Button>
+        <Button title="Dashboard" onPress={() => this.props.navigation.navigate('Dashboard')}></Button>
 
       </Container>
     );

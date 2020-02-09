@@ -13,8 +13,8 @@ export default class Guesses extends React.Component {
     super(props);
     this.state = {
       guesses: [
-        { name_1: 'Corinthians', score_1: 4, name_2: 'Palmeiras', score_2: 0 },
-        { name_1: 'São Paulo', score_1: 2, name_2: 'Santos', score_2: 2 },
+        { name_1: 'Corinthians', score_1: 7, name_2: 'Santos', score_2: 1 },
+        { name_1: 'São Paulo', score_1: 2, name_2: 'Palmeiras', score_2: 2 },
         { name_1: 'Paisandu', score_1: 4, name_2: 'Palmeiras', score_2: 0 },
         { name_1: 'Vitória', score_1: 2, name_2: 'Bahia', score_2: 2 },
         { name_1: 'Cruzeiro', score_1: 4, name_2: 'Palmeiras', score_2: 0 },
@@ -31,8 +31,8 @@ export default class Guesses extends React.Component {
     return (
       <Container>
         <Header />
-        <NavGuess />
         <GuessTitle guess={this.props.navigation.getParam('id', 0) } />
+        <NavGuess guess={this.props.navigation.getParam('id', 0) } navigation={this.props.navigation} />
         <ScrollView>
           {this.state.guesses.map((item, key) => 
             <GuessContainer key={key}>
@@ -50,7 +50,7 @@ export default class Guesses extends React.Component {
             </GuessContainer>
           )}
         </ScrollView>
-        <Button title="Salvar" onPress={() => this.props.navigation.navigate('Dashboard')}></Button>        
+        <Button title="Dashboard" onPress={() => this.props.navigation.navigate('Dashboard')}></Button>
       </Container>
     );
   }

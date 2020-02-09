@@ -16,11 +16,11 @@ export default class Results extends React.Component {
     return (
       <View>
         <Header />
-        <NavGuess />
         <GuessTitle guess={this.props.navigation.getParam('id', 0) } />
+        <NavGuess guess={this.props.navigation.getParam('id', 0) } navigation={this.props.navigation} />
         <Text>Results</Text>
         <Button title="Dashboard" onPress={() => this.props.navigation.navigate('Dashboard')}></Button>
-        <Button title="Salvar"></Button>
+        <Button title="Dashboard" onPress={() => this.props.navigation.navigate('Dashboard')}></Button>
       </View>
     );
   }
