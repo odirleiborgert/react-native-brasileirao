@@ -3,7 +3,7 @@ import React from 'react';
 import { Button } from 'react-native';
 import { Container, GuessContainer, GuessTime, GuessTimeLeftName, GuessNumber, GuessX, GuessXText, ContainerScrollView, ScrollView } from './styles'
 
-import { guesses } from '~/data/guesses'
+import { guesses } from '~/data'
 
 import Header from '~/components/Header'
 import GuessTitle from '~/components/GuessTitle'
@@ -41,7 +41,7 @@ export default class Guesses extends React.Component {
                 </GuessTime>
               </GuessContainer>
             )}
-            <Button title="Dashboard" onPress={() => this.props.navigation.navigate('Dashboard')}></Button>
+            <Button title="Salvar" color="#666"></Button>
           </ContainerScrollView>
         </ScrollView>
       </Container>

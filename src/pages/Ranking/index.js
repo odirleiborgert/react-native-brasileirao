@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Text, Button } from 'react-native';
+import { Text } from 'react-native';
 
 import { Container, ScrollView, UserContainer, UserBoxName, UserName, UserBoxPointer, UserPointer } from './styles'
 
-import { ranking } from '~/data/ranking'
+import { rankingGuess } from '~/data'
 
 import Header from '~/components/Header'
 import GuessTitle from '~/components/GuessTitle'
@@ -15,7 +15,7 @@ export default class Ranking extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      ranking
+      ranking: rankingGuess
     }
   }
 
@@ -45,8 +45,6 @@ export default class Ranking extends React.Component {
           )}
 
         </ScrollView>
-
-        
 
       </Container>
     );
