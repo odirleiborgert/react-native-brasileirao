@@ -5,8 +5,10 @@ export const Container = styled.ImageBackground`
     background: #ccc;
 `
 
-export const ScrollView = styled.ScrollView`
-    
+export const ScrollView = styled.ScrollView.attrs({
+    contentContainerStyle: { paddingTop: 20, paddingBottom: 20, justifyContent: 'center' }
+})`
+    height: 100%;
 `
 
 // Palpites Blocks

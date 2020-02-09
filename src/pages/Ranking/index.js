@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { Text } from 'react-native';
-
 import { Container, ScrollView, UserContainer, UserBoxName, UserName, UserBoxPointer, UserPointer } from './styles'
 
 import { rankingGuess } from '~/data'
@@ -30,8 +28,6 @@ export default class Ranking extends React.Component {
         <NavGuess guess={this.props.navigation.getParam('id', 0) } navigation={this.props.navigation} />
 
         <ScrollView>
-
-          <Text>Ranking</Text>
 
           {this.state.ranking.map((item, key) => 
             <UserContainer key={key}>

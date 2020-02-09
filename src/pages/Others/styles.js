@@ -6,8 +6,11 @@ export const Container = styled.View`
     background: #ccc;
 `
 export const ScrollView = styled.ScrollView.attrs({
-    contentContainerStyle: { paddingBottom: 20 }
-})``
+    contentContainerStyle: { paddingTop: 20, paddingBottom: 20, justifyContent: 'center' }
+})`
+    height: 100%;
+`
+
 
 export const Name = styled.Text`
     font-size: 26px;

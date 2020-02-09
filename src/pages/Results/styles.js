@@ -6,9 +6,9 @@ export const Container = styled.View`
 `
 
 export const ScrollView = styled.ScrollView.attrs({
-    contentContainerStyle: { flexGrow: 1, justifyContent: 'center' }
+    contentContainerStyle: { paddingTop: 20, justifyContent: 'center' }
 })`
-    background: red;
+    height: 100%;
 `
 
 export const GuessContainer = styled.View`
