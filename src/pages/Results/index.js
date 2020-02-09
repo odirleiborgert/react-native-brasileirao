@@ -22,7 +22,7 @@ export default class Results extends React.Component {
       <Container>
         <Header navigation={this.props.navigation} />
         <GuessTitle guess={this.props.navigation.getParam('id', 0) } />
-        <NavGuess guess={this.props.navigation.getParam('id', 0) } navigation={this.props.navigation} />
+        <NavGuess guess={this.props.navigation.getParam('id', 0) } navigation={this.props.navigation} nav="Results" />
         <ScrollView>
           {this.state.results.map((item, key) => 
             <GuessContainer key={key}>

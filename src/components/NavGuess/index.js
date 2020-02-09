@@ -1,50 +1,42 @@
 import React from 'react';
 
-import { TouchableOpacity } from 'react-native'
+import { Button } from 'react-native'
 
-import { Text, Item, ScrollView } from './styles'
+import { Item, ScrollView } from './styles'
 
 export default class NavGuess extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      navigate: [
+        { title: 'Meus Palpites', route: 'Guesses', color: '#999' },
+        { title: 'Outros Palpites', route: 'Others', color: '#999' },
+        { title: 'Resultados', route: 'Results', color: '#999' },
+        { title: 'Ranking', route: 'Ranking', color: '#999' },
+      ]
+    }
+    this.state.navigate = this.state.navigate.map((item) => {
+      if (item.route === this.props.nav) {
+        item.color = '#666'
+      }
+      return item
+    })
   }
 
   render() {
     return (
       <ScrollView>
 
-        <TouchableOpacity onPress={() => this.props.navigation.navigate('Guesses', {
-          id: this.props.guess
-        })}>
-          <Item>
-            <Text>Meus Palpites</Text>
+        {this.state.navigate.map((item, key) => 
+          <Item key={key}>
+            <Button title={item.title} color={item.color} onPress={() => this.props.navigation.navigate(item.route, {
+              id: this.props.guess
+            })}>
+            </Button>
           </Item>
-        </TouchableOpacity>
+        )}
 
-        <TouchableOpacity onPress={() => this.props.navigation.navigate('Others', {
-          id: this.props.guess
-        })}>
-          <Item>
-            <Text>Outros Palpites</Text>
-          </Item>
-        </TouchableOpacity>
-
-        <TouchableOpacity onPress={() => this.props.navigation.navigate('Results', {
-          id: this.props.guess
-        })}>
-          <Item>
-            <Text>Resultados</Text>
-          </Item>
-        </TouchableOpacity>
-
-        <TouchableOpacity onPress={() => this.props.navigation.navigate('Ranking', {
-          id: this.props.guess
-        })}>
-          <Item>
-            <Text>Ranking</Text>
-          </Item>
-        </TouchableOpacity>
       </ScrollView>
     );
   }

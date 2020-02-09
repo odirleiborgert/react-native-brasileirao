@@ -22,7 +22,7 @@ export default class Others extends React.Component {
       <Container>
         <Header navigation={this.props.navigation} />
         <GuessTitle guess={this.props.navigation.getParam('id', 0) } />
-        <NavGuess guess={this.props.navigation.getParam('id', 0) } navigation={this.props.navigation} />
+        <NavGuess guess={this.props.navigation.getParam('id', 0) } navigation={this.props.navigation} nav="Others" />
         <ScrollView>
           {this.state.othersGuesses.map((item) =>
             <> 

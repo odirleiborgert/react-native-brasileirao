@@ -25,7 +25,7 @@ export default class Ranking extends React.Component {
 
         <GuessTitle guess={this.props.navigation.getParam('id', 0) } />
 
-        <NavGuess guess={this.props.navigation.getParam('id', 0) } navigation={this.props.navigation} />
+        <NavGuess guess={this.props.navigation.getParam('id', 0) } navigation={this.props.navigation} nav="Ranking" />
 
         <ScrollView>
 
