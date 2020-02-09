@@ -5,17 +5,12 @@ export const Container = styled.ImageBackground`
     background: #ccc;
 `
 
-export const View = styled.View`
+export const ScrollView = styled.ScrollView`
+`
+
+export const ContainerScrollView = styled.ScrollView`
     width: 90%;
     margin: auto;
-    flex: 1;
-`
-
-export const Text = styled.Text`
-    font-size: 16px;
-`
-
-export const ScrollView = styled.ScrollView`
 `
 
 /// Palpites Blocks

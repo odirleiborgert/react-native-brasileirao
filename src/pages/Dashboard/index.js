@@ -1,6 +1,8 @@
 import React from 'react';
 
-import { Container, View, ScrollView, Title, Text } from './styles'
+import { Container, View, ScrollView, Title, Text, UserContainer, UserBoxName, UserName, UserBoxPointer, UserPointer } from './styles'
+
+import { rankingGeneral } from '~/data/ranking'
 
 import Header from '~/components/Header'
 import BoxContainer from '~/components/BoxContainer'
@@ -26,7 +28,8 @@ export default class Dashboard extends React.Component {
           { number: 2, title: 'xyz' },
           { number: 1, title: 'xyz' },
         ]
-      }
+      },
+      rankingGeneral
     }
   }
 
@@ -41,31 +44,16 @@ export default class Dashboard extends React.Component {
         <View>
           <Title>Ranking geral</Title>
           <ScrollView>
-            <Text>Ranking geral</Text>
-            <Text>Ranking geral</Text>
-            <Text>Ranking geral</Text>
-            <Text>Ranking geral</Text>
-            <Text>Ranking geral</Text>
-            <Text>Rankadfing geral</Text>
-            <Text>Ranking asdfgeral</Text>
-            <Text>Ranking geral</Text>
-            <Text>Ranking gasdferal</Text>
-            <Text>Rankinasg geral</Text>
-            <Text>Ranking geral</Text>
-            <Text>Ranking geral</Text>
-            <Text>Rankadfing geral</Text>
-            <Text>Ranking asdfgeral</Text>
-            <Text>Ranking geral</Text>
-            <Text>Ranking gasdferal</Text>
-            <Text>Rankinasg geral</Text>
-            <Text>Ranking gasderal</Text>
-            <Text>Ranking geral</Text>
-            <Text>Ranking geral</Text>
-            <Text>Ranking a</Text>
-            <Text>Ranking geral</Text>
-            <Text>Rankingasdf geral</Text>
-            <Text>Ranking geral</Text>
-            <Text>Ranking geasfasdral</Text>
+            {this.state.rankingGeneral.map((item, key) => 
+              <UserContainer key={key}>
+                <UserBoxName>
+                  <UserName>{item.name}</UserName>
+                </UserBoxName>
+                <UserBoxPointer>
+                  <UserPointer>{item.score} pts</UserPointer>
+                </UserBoxPointer>
+              </UserContainer>
+            )}
           </ScrollView>
         </View>
 

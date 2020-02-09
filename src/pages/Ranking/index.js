@@ -4,6 +4,8 @@ import { Text, Button } from 'react-native';
 
 import { Container, ScrollView, UserContainer, UserBoxName, UserName, UserBoxPointer, UserPointer } from './styles'
 
+import { ranking } from '~/data/ranking'
+
 import Header from '~/components/Header'
 import GuessTitle from '~/components/GuessTitle'
 import NavGuess from '~/components/NavGuess'
@@ -12,18 +14,8 @@ export default class Ranking extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      ranking: [
-        { name: 'Odirlei', score: 123 },
-        { name: 'Karlla', score: 123 },
-        { name: 'Thiago', score: 123 },
-        { name: 'Odirlei', score: 123 },
-        { name: 'Karlla', score: 123 },
-        { name: 'Thiago', score: 123 },
-        { name: 'Odirlei', score: 123 },
-        { name: 'Karlla', score: 123 },
-        { name: 'Thiago', score: 123 },
-      ]
+    this.state = { 
+      ranking
     }
   }
 
