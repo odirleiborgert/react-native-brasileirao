@@ -34,7 +34,7 @@ export default class Dashboard extends React.Component {
     return (
       <Container>
 
-        <Header />
+        <Header navigation={this.props.navigation} />
 
         <BoxContainer title="Próximas rodadas" data={this.state.guesses.news} navigation={this.props.navigation} />
         

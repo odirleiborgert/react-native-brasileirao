@@ -5,21 +5,11 @@ export const Container = styled.ImageBackground`
     background: #ccc;
 `
 
-export const View = styled.View`
-    width: 90%;
-    margin: auto;
-    flex: 1;
-`
-
-export const Text = styled.Text`
-    font-size: 16px;
-`
-
 export const ScrollView = styled.ScrollView`
     
 `
 
-/// Palpites Blocks
+// Palpites Blocks
 
 export const UserContainer = styled.View`
     width: 90%;
@@ -41,6 +31,6 @@ export const UserBoxPointer = styled.View`
     align-items: flex-end;
 `
 export const UserPointer = styled.Text`
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
 `

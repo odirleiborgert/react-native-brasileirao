@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Button } from 'react-native';
-import { Container, GuessContainer, GuessTime, GuessTimeLeftName, GuessNumber, GuessX, GuessXText, View, ScrollView, Text } from './styles'
+import { Container, GuessContainer, GuessTime, GuessTimeLeftName, GuessNumber, GuessX, GuessXText, ScrollView } from './styles'
 
 import Header from '~/components/Header'
 import GuessTitle from '~/components/GuessTitle'
@@ -30,7 +30,7 @@ export default class Guesses extends React.Component {
   render() {
     return (
       <Container>
-        <Header />
+        <Header navigation={this.props.navigation} />
         <GuessTitle guess={this.props.navigation.getParam('id', 0) } />
         <NavGuess guess={this.props.navigation.getParam('id', 0) } navigation={this.props.navigation} />
         <ScrollView>
@@ -49,8 +49,8 @@ export default class Guesses extends React.Component {
               </GuessTime>
             </GuessContainer>
           )}
+          <Button title="Dashboard" onPress={() => this.props.navigation.navigate('Dashboard')}></Button>
         </ScrollView>
-        <Button title="Dashboard" onPress={() => this.props.navigation.navigate('Dashboard')}></Button>
       </Container>
     );
   }

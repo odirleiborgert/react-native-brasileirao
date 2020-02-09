@@ -8,6 +8,10 @@ import Ranking from '~/pages/Ranking';
 import Results from '~/pages/Results';
 
 const Routes = createAppContainer(createSwitchNavigator({
+    Login: {
+        screen: Login,
+        path: 'login'
+    },
     Dashboard: {
         screen: Dashboard,
         path: 'dashboard'
@@ -20,10 +24,6 @@ const Routes = createAppContainer(createSwitchNavigator({
         screen: Others,
         path: 'others/:id'
     },
-    Login: {
-        screen: Login,
-        path: 'login'
-    },
     Ranking: {
         screen: Ranking,
         path: 'ranking/:id'
@@ -33,6 +33,6 @@ const Routes = createAppContainer(createSwitchNavigator({
         path: 'results/:id'
     }
 },
-{initialRouteName : 'Ranking'}));
+{initialRouteName : 'Dashboard'}));
 
 export default Routes;

@@ -16,7 +16,6 @@ export const Text = styled.Text`
 `
 
 export const ScrollView = styled.ScrollView`
-    margin-bottom: 20px;
 `
 
 /// Palpites Blocks

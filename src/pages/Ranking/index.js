@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { View, Button } from 'react-native';
+import { Text, Button } from 'react-native';
 
 import { Container, ScrollView, UserContainer, UserBoxName, UserName, UserBoxPointer, UserPointer } from './styles'
 
@@ -12,13 +12,26 @@ export default class Ranking extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      ranking: [
+        { name: 'Odirlei', score: 123 },
+        { name: 'Karlla', score: 123 },
+        { name: 'Thiago', score: 123 },
+        { name: 'Odirlei', score: 123 },
+        { name: 'Karlla', score: 123 },
+        { name: 'Thiago', score: 123 },
+        { name: 'Odirlei', score: 123 },
+        { name: 'Karlla', score: 123 },
+        { name: 'Thiago', score: 123 },
+      ]
+    }
   }
 
   render() {
     return (
       <Container>
 
-        <Header />
+        <Header navigation={this.props.navigation} />
 
         <GuessTitle guess={this.props.navigation.getParam('id', 0) } />
 
@@ -26,54 +39,22 @@ export default class Ranking extends React.Component {
 
         <ScrollView>
 
-          <UserContainer>
-            <UserBoxName>
-              <UserName>Odirlei</UserName>
-            </UserBoxName>
-            <UserBoxPointer>
-              <UserPointer>4545 pts</UserPointer>
-            </UserBoxPointer>
-          </UserContainer>
+          <Text>Ranking</Text>
 
-          <UserContainer>
-            <UserBoxName>
-              <UserName>Odirlei</UserName>
-            </UserBoxName>
-            <UserBoxPointer>
-              <UserPointer>1520 pts</UserPointer>
-            </UserBoxPointer>
-          </UserContainer>
-
-          <UserContainer>
-            <UserBoxName>
-              <UserName>Odirlei</UserName>
-            </UserBoxName>
-            <UserBoxPointer>
-              <UserPointer>980 pts</UserPointer>
-            </UserBoxPointer>
-          </UserContainer>
-
-          <UserContainer>
-            <UserBoxName>
-              <UserName>Odirlei</UserName>
-            </UserBoxName>
-            <UserBoxPointer>
-              <UserPointer>800 pts</UserPointer>
-            </UserBoxPointer>
-          </UserContainer>
-
-          <UserContainer>
-            <UserBoxName>
-              <UserName>Odirlei</UserName>
-            </UserBoxName>
-            <UserBoxPointer>
-              <UserPointer>153 pts</UserPointer>
-            </UserBoxPointer>
-          </UserContainer>
+          {this.state.ranking.map((item, key) => 
+            <UserContainer key={key}>
+              <UserBoxName>
+                <UserName>{item.name}</UserName>
+              </UserBoxName>
+              <UserBoxPointer>
+                <UserPointer>{item.score} pts</UserPointer>
+              </UserBoxPointer>
+            </UserContainer>
+          )}
 
         </ScrollView>
 
-        <Button title="Dashboard" onPress={() => this.props.navigation.navigate('Dashboard')}></Button>
+        
 
       </Container>
     );

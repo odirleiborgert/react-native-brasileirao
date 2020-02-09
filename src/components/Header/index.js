@@ -1,6 +1,8 @@
 import React from 'react';
 
-import { Text, View } from './styles'
+import { Button, Text } from 'react-native'
+
+import { Container, ViewLeft, ViewRight } from './styles'
 
 export default class Header extends React.Component {
 
@@ -8,11 +10,17 @@ export default class Header extends React.Component {
     super(props);
   }
 
+  
   render() {
     return (
-      <View>
-        <Text>Odirlei</Text>
-      </View>
+      <Container>
+        <ViewLeft>
+          <Button title="Home" onPress={() => this.props.navigation.navigate('Dashboard')}></Button>
+        </ViewLeft>
+        <ViewRight>
+          <Text>Odirlei</Text>
+        </ViewRight>
+      </Container>
     );
   }
 }
