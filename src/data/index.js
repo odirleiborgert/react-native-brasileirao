@@ -42,32 +42,32 @@ export const guesses = [
 
 
 export const rankingGuess = [
-    { name: 'Odirlei', score: 123 },
-    { name: 'Karlla', score: 123 },
-    { name: 'Thiago', score: 123 },
-    { name: 'Odirlei', score: 123 },
-    { name: 'Karlla', score: 123 },
-    { name: 'Thiago', score: 123 },
-    { name: 'Odirlei', score: 123 },
-    { name: 'Karlla', score: 123 },
-    { name: 'Thiago', score: 123 },
+    { name: 'Maureen', score: 120 },
+    { name: 'Tristan', score: 110 },
+    { name: 'Jessica', score: 96 },
+    { name: 'Graham', score: 82 },
+    { name: 'Gregory', score: 80 },
+    { name: 'Annie', score: 76 },
+    { name: 'Susan', score: 59 },
+    { name: 'Nadine', score: 56 },
+    { name: 'Rick', score: 50 },
 ]
 
 export const rankingGeneral = [
-    { name: 'Odirlei', score: 12323 },
-    { name: 'Karlla', score: 12223 },
-    { name: 'Thiago', score: 12233 },
-    { name: 'Odirlei', score: 12323 },
-    { name: 'Karlla', score: 12233 },
-    { name: 'Thiago', score: 123 },
-    { name: 'Odirlei', score: 123 },
-    { name: 'Karlla', score: 123 },
-    { name: 'Thiago', score: 123 },
+  { name: 'Susan', score: 1854 },
+  { name: 'Tristan', score: 1850 },
+  { name: 'Gregory', score: 1800 },
+  { name: 'Nadine', score: 1754 },
+  { name: 'Graham', score: 1720 },
+  { name: 'Maureen', score: 1700 },
+  { name: 'Annie', score: 1698 },
+  { name: 'Jessica', score: 1680 },
+  { name: 'Rick', score: 1650 },
 ]
 
 export const othersGuesses = [
   {
-    name: 'Odirlei', 
+    name: 'Gregory', 
     guesses: [
       { name_1: 'Corinthians', score_1: 7, name_2: 'Santos', score_2: 1 },
       { name_1: 'São Paulo', score_1: 2, name_2: 'Palmeiras', score_2: 2 },
@@ -82,7 +82,7 @@ export const othersGuesses = [
     ]
   },
   {
-    name: 'Karlla', 
+    name: 'Maureen', 
     guesses: [
       { name_1: 'Corinthians', score_1: 7, name_2: 'Santos', score_2: 1 },
       { name_1: 'São Paulo', score_1: 2, name_2: 'Palmeiras', score_2: 2 },
@@ -97,7 +97,7 @@ export const othersGuesses = [
     ]
   },
   {
-    name: 'Thiago', 
+    name: 'Annie', 
     guesses: [
       { name_1: 'Corinthians', score_1: 7, name_2: 'Santos', score_2: 1 },
       { name_1: 'São Paulo', score_1: 2, name_2: 'Palmeiras', score_2: 2 },
@@ -111,6 +111,12 @@ export const othersGuesses = [
       { name_1: 'Athlético PR', score_1: 2, name_2: 'Santos', score_2: 2 },
     ]
   },
+  { name: 'Susan', guesses: [] },
+  { name: 'Tristan', guesses: [] },
+  { name: 'Nadine', guesses: [] },
+  { name: 'Graham', guesses: [] },
+  { name: 'Jessica', guesses: [] },
+  { name: 'Rick', guesses: [] },
 ]
 
 export const results = [

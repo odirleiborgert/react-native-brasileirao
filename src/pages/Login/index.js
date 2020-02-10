@@ -1,9 +1,6 @@
 import React from 'react';
 
-import { Container, Image, TextInput, Button, View } from './styles'
-
-import bg from '~/assets/img/bg.jpg'
-import logo from '~/assets/img/logo.png'
+import { Container, View, Title, TextInput, Button } from './styles'
 
 export default class Login extends React.Component {
 
@@ -13,12 +10,12 @@ export default class Login extends React.Component {
 
   render() {
     return (
-      <Container source={bg} resizeMode="cover">
+      <Container>
         <View>
-          <Image source={logo} />
+          <Title>Bolão do Brasileirão 2020</Title>
           <TextInput maxLength={40} value="Usuário" />
           <TextInput maxLength={40} value="Senha" />
-          <Button title="Entrar" color="#7dbf49" onPress={() => this.props.navigation.navigate('Dashboard')} />
+          <Button title="Entrar" color="#666" onPress={() => this.props.navigation.navigate('Dashboard')} />
         </View>
       </Container>
     );

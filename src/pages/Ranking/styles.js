@@ -9,4 +9,6 @@ export const ScrollView = styled.ScrollView.attrs({
     contentContainerStyle: { paddingTop: 20, paddingBottom: 20, justifyContent: 'center' }
 })`
     height: 100%;
+    width: 90%;
+    margin: auto;
 `
