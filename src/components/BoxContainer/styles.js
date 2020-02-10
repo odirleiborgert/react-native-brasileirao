@@ -14,7 +14,6 @@ export const BoxTitle = styled.Text`
 export const BoxView = styled.View`
     height: 160px;
     padding: 10px 0;
-    background: #ddd;
     justify-content: center;
     align-items: flex-start;
 `
