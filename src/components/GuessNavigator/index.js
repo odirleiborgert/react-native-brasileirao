@@ -4,7 +4,7 @@ import { Button } from 'react-native'
 
 import { Item, ScrollView } from './styles'
 
-export default class NavGuess extends React.Component {
+export default class GuessNavigator extends React.Component {
 
   constructor(props) {
     super(props);

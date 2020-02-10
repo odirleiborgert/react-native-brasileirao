@@ -14,6 +14,7 @@ export const rounds = {
       { number: 15, title: 'xyz' },
       { number: 16, title: 'xyz' },
       { number: 17, title: 'xyz' },
+      { number: 18, title: 'xyz' },
     ],
     closed: [
       { number: 5, title: 'xyz' },

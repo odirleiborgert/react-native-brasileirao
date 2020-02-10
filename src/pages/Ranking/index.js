@@ -1,20 +1,24 @@
 import React from 'react';
 
-import { Container, ScrollView, UserContainer, UserBoxName, UserName, UserBoxPointer, UserPointer } from './styles'
+import { Container, ScrollView } from './styles'
 
 import { rankingGuess } from '~/data'
 
 import Header from '~/components/Header'
 import GuessTitle from '~/components/GuessTitle'
-import NavGuess from '~/components/NavGuess'
+import GuessNavigator from '~/components/GuessNavigator'
+import RankingItem from '~/components/RankingItem'
 
 export default class Ranking extends React.Component {
 
   constructor(props) {
+
     super(props);
+
     this.state = { 
       ranking: rankingGuess
     }
+    
   }
 
   render() {
@@ -25,21 +29,12 @@ export default class Ranking extends React.Component {
 
         <GuessTitle guess={this.props.navigation.getParam('id', 0) } />
 
-        <NavGuess guess={this.props.navigation.getParam('id', 0) } navigation={this.props.navigation} nav="Ranking" />
+        <GuessNavigator guess={this.props.navigation.getParam('id', 0) } navigation={this.props.navigation} nav="Ranking" />
 
         <ScrollView>
-
           {this.state.ranking.map((item, key) => 
-            <UserContainer key={key}>
-              <UserBoxName>
-                <UserName>{item.name}</UserName>
-              </UserBoxName>
-              <UserBoxPointer>
-                <UserPointer>{item.score} pts</UserPointer>
-              </UserBoxPointer>
-            </UserContainer>
+            <RankingItem data={item} key={key} />
           )}
-
         </ScrollView>
 
       </Container>

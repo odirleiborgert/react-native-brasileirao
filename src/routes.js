@@ -33,6 +33,6 @@ const Routes = createAppContainer(createSwitchNavigator({
         path: 'results/:id'
     }
 },
-{initialRouteName : 'Dashboard'}));
+{initialRouteName : 'Login'}));
 
 export default Routes;
