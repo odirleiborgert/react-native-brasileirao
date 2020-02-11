@@ -1,6 +1,10 @@
 import React from 'react';
 
-import { Container, View, Title, TextInput, Button } from './styles'
+import { StatusBar } from 'react-native'
+
+import { Container, View, Title } from './styles'
+
+import { Input, Button } from '@ui-kitten/components'
 
 export default class Login extends React.Component {
 
@@ -12,10 +16,11 @@ export default class Login extends React.Component {
     return (
       <Container>
         <View>
+          <StatusBar backgroundColor="#F2F8FC" barStyle="dark-content" />
           <Title>Bolão do Brasileirão 2020</Title>
-          <TextInput maxLength={40} value="Usuário" />
-          <TextInput maxLength={40} value="Senha" />
-          <Button title="Entrar" color="#666" onPress={() => this.props.navigation.navigate('Dashboard')} />
+          <Input placeholder="Usuário" />
+          <Input placeholder="Senha" />
+          <Button onPress={() => this.props.navigation.navigate('Dashboard')}>ENTRAR</Button>
         </View>
       </Container>
     );

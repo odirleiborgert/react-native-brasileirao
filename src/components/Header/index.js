@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Button, Text } from 'react-native'
+import { Container } from './styles'
 
-import { Container, ViewLeft, ViewRight } from './styles'
+import { TopNavigation } from '@ui-kitten/components';
 
 export default class Header extends React.Component {
 
@@ -13,12 +13,7 @@ export default class Header extends React.Component {
   render() {
     return (
       <Container>
-        <ViewLeft>
-          <Button title="Home" color="#666" onPress={() => this.props.navigation.navigate('Dashboard')}></Button>
-        </ViewLeft>
-        <ViewRight>
-          <Text>Gregory</Text>
-        </ViewRight>
+        <TopNavigation title='Home' alignment='center' />
       </Container>
     );
   }
