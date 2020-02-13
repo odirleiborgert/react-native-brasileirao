@@ -61,6 +61,9 @@ export const rankingGeneral = [
   { name: 'Graham', score: 1720 },
   { name: 'Maureen', score: 1700 },
   { name: 'Annie', score: 1698 },
+  { name: 'Graham', score: 1720 },
+  { name: 'Maureen', score: 1700 },
+  { name: 'Annie', score: 1698 },
   { name: 'Jessica', score: 1680 },
   { name: 'Rick', score: 1650 },
 ]
