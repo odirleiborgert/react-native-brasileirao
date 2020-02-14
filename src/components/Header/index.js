@@ -15,21 +15,23 @@ export default class Header extends React.Component {
   ArrowBackIcon () {
     return (
       <TouchableOpacity onPress={() => this.props.navigation.navigate('Dashboard')}>
-        <Icon name='arrow-back-outline' fill='#666' width={20} height={20} color="red" style={{ marginLeft: 10, marginRight: 5 }} />
+        <Icon name='arrow-back-outline' fill='#fff' width={20} height={20} color="red" style={{ marginLeft: 10, marginRight: 5 }} />
       </TouchableOpacity>
     )
   };
 
   Username () {
     return (
-      <Text style={{ marginRight: 10 }}>Gregory</Text>
+      <TouchableOpacity onPress={() => this.props.navigation.navigate('Login')}>
+        <Text style={{ marginRight: 10, color: '#fff' }}>Sair</Text>
+      </TouchableOpacity>
     )
   };
    
   render() {
     return (
       <Layout>
-        <TopNavigation title='Dashboard' alignment='start' leftControl={this.ArrowBackIcon()} rightControls={this.Username()} />
+        <TopNavigation style={styles.topNavigation} titleStyle={styles.title} title='Dashboard' alignment='start' leftControl={this.ArrowBackIcon()} rightControls={this.Username()} />
       </Layout>
     );
   }
@@ -37,7 +39,10 @@ export default class Header extends React.Component {
 
 
 const styles = StyleService.create({
-  container: {
-    backgroundColor: '#3366FF'
+  topNavigation: {
+    backgroundColor: '#03b7d8'
   },
+  title: {
+    color: '#fff',
+  }
 })

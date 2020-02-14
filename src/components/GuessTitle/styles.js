@@ -5,5 +5,6 @@ export const Text = styled.Text`
     font-weight: bold;
     text-align: center;
     margin: 25px 0 5px 0;
+    color: #03b7d8;
 `
 

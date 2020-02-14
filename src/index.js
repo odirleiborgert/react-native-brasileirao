@@ -13,7 +13,7 @@ import Routes from '~/routes';
 
 const App = () => (
     <ApplicationProvider mapping={mapping} theme={lightTheme}>
-        <StatusBar backgroundColor="#fff" barStyle="dark-content" />
+        <StatusBar backgroundColor="#028ea8" barStyle="light-content" />
         <Routes />
     </ApplicationProvider>
 );

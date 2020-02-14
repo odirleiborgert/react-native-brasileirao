@@ -58,7 +58,7 @@ const styles = StyleService.create({
   },
   title: {
     fontWeight: 'bold',
-    color: '#3366FF',
+    color: '#03b7d8',
     marginLeft: 20,
   },
   ranking: {

@@ -19,12 +19,14 @@ export default class Login extends React.Component {
   render() {
     return (
       <Layout style={styles.container}>
+        <StatusBar backgroundColor="#F2F8FC" barStyle="dark-content" />
         <Layout style={styles.form}>
-          <StatusBar backgroundColor="#F2F8FC" barStyle="dark-content" />
-          <Text style={styles.title} category='h4'>Bolão do Brasileirão 2020</Text>
+          <Text style={styles.title} category='h4'>Bolão do</Text>
+          <Text style={styles.subtitle} category='h5'>Brasileirão</Text>
+          <Text style={styles.number} category='h2'>2020</Text>
           <Input style={styles.input} placeholder="Usuário" />
           <Input style={styles.input} placeholder="Senha" />
-          <Button icon={BackIcon} onPress={() => this.props.navigation.navigate('Dashboard')}>ENTRAR</Button>
+          <Button style={styles.button} icon={BackIcon} onPress={() => this.props.navigation.navigate('Dashboard')}>ENTRAR</Button>
         </Layout>
       </Layout>
     );
@@ -44,15 +46,31 @@ const styles = StyleService.create({
     margin: 'auto',
   },
   title: {
-    fontSize: 26,
+    lineHeight: 16,
+    fontSize: 16,
     fontWeight: 'bold',
-    textAlign: 'center',
-    color: '#3366FF',
-    marginTop: 15,
+    color: '#03b7d8',
+  },
+  subtitle: {
+    lineHeight: 40,
+    fontSize: 36,
+    fontWeight: 'bold',
+    textTransform: 'uppercase',
+    color: '#03b7d8',
+  },
+  number: {
+    lineHeight: 60,
+    fontSize: 60,
+    fontWeight: 'bold',
+    color: '#03b7d8',
     marginBottom: 15,
   },
   input: {
     marginBottom: 5,
+  },
+  button: {
+    backgroundColor: '#03b7d8',
+    borderColor: '#07b0d0'
   }
 })
 
